@@ -7,6 +7,8 @@
 @section('content')
 
 <div class="container">
+
+  <a class="btn btn-warning mt-5" href="{{route('comics.create')}}" role="button">Crea</a>
     <table class="table">
         <thead>
           <tr>
@@ -25,6 +27,10 @@
             <td>{{$comic->price}}</td>
             <td>{{$comic->series}}</td>
             <td>{{$comic->type}}</td>
+
+            <td >
+              <a class="btn btn-primary mt-5" href="{{route('comics.show', $comic->id)}}" role="button">Vedi</a>
+            </td>
           </tr>            
           @endforeach
           
